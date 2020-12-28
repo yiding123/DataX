@@ -1,0 +1,11 @@
+{
+    "name": "mongodbsimplereader",
+    "parameter": {
+        "address": [],
+        "userName": "",
+        "userPassword": "",
+        "dbName": "",
+        "collectionName": "",
+        "column": []
+    }
+}

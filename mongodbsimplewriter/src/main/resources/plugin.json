@@ -1,0 +1,6 @@
+{
+    "name": "mongodbsimplewriter",
+    "class": "com.alibaba.datax.plugin.writer.mongodbsimplewriter.MongoDBSimpleWriter",
+    "description": "useScene: prod. mechanism: via mongoclient connect mongodb write data concurrent.",
+    "developer": "yiding"
+}

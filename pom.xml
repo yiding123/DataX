@@ -68,6 +68,7 @@
         <module>opentsdbreader</module>
         <module>cassandrareader</module>
         <module>gdbreader</module>
+        <module>mongodbsimplereader</module>
 
         <!-- writer -->
         <module>mysqlwriter</module>
@@ -97,6 +98,7 @@
         <module>gdbwriter</module>
         <module>cassandrawriter</module>
         <module>clickhousewriter</module>
+        <module>mongodbsimplewriter</module>
         <!-- common support module -->
         <module>plugin-rdbms-util</module>
         <module>plugin-unstructured-storage-util</module>
