@@ -12,6 +12,9 @@ import java.util.Date;
  */
 public abstract class Column {
 
+	// add by yiding, 2021/3/30
+	private String name;
+
 	private Type type;
 
 	private Object rawData;
@@ -46,6 +49,14 @@ public abstract class Column {
 
 	protected void setByteSize(int byteSize) {
 		this.byteSize = byteSize;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public abstract Long asLong();

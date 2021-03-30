@@ -12,7 +12,7 @@ public class TransformerExecutionParas {
     /**
      * 以下是function参数
      */
-
+    private String columnName;
     private Integer columnIndex;
     private String[] paras;
     private Map<String, Object> tContext;
@@ -58,5 +58,13 @@ public class TransformerExecutionParas {
 
     public void setExtraPackage(List<String> extraPackage) {
         this.extraPackage = extraPackage;
+    }
+
+    public String getColumnName() {
+        return columnName;
+    }
+
+    public void setColumnName(String columnName) {
+        this.columnName = columnName;
     }
 }

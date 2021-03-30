@@ -31,6 +31,24 @@ MongoDBSimpleReader 通过Datax框架从MongoDB并行的读取数据，通过主
 	                        "column": []
 	                    }
 	                },
+                    "transformer": [
+                        {
+                            "name": "dx_replace",
+                            "parameter": 
+                                {
+                                "columnIndex":0,
+                                "paras":["3","4","****"]
+                                }  
+                        },
+                        {
+                            "name": "dx_replace_by_colname",
+                            "parameter": 
+                                {
+                                "columnName":0,
+                                "paras":["3","4","****"]
+                                }  
+                        }
+                    ],               
 	                "writer": {
 	                    "name": "odpswriter",
 	                    "parameter": {

@@ -67,12 +67,15 @@ public class TransformerUtil {
              */
             if (!functionName.equals("dx_groovy") && !functionName.equals("dx_fackGroovy")) {
                 Integer columnIndex = configuration.getInt(CoreConstant.TRANSFORMER_PARAMETER_COLUMNINDEX);
-
-                if (columnIndex == null) {
-                    throw DataXException.asDataXException(TransformerErrorCode.TRANSFORMER_ILLEGAL_PARAMETER, "columnIndex must be set by UDF:name=" + functionName);
+                String columnName = configuration.getString(CoreConstant.TRANSFORMER_PARAMETER_COLUMNNAME);
+                if (columnIndex == null && columnName == null) {
+                    throw DataXException.asDataXException(TransformerErrorCode.TRANSFORMER_ILLEGAL_PARAMETER, "columnIndex or columnName must be set by UDF:name=" + functionName);
                 }
-
-                transformerExecutionParas.setColumnIndex(columnIndex);
+                if(columnIndex != null) {
+                    transformerExecutionParas.setColumnIndex(columnIndex);
+                }else{
+                    transformerExecutionParas.setColumnName(columnName);
+                }
                 List<String> paras = configuration.getList(CoreConstant.TRANSFORMER_PARAMETER_PARAS, String.class);
                 if (paras != null && paras.size() > 0) {
                     transformerExecutionParas.setParas(paras.toArray(new String[0]));

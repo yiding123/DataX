@@ -33,6 +33,24 @@ MongoDBSimpleWriter 通过Datax框架获取Reader生成的数据，然后将Data
                         "odpsServer": "http://xxx/api"
                     }
                 },
+                "transformer": [
+                    {
+                        "name": "dx_replace",
+                        "parameter": 
+                            {
+                            "columnIndex":0,
+                            "paras":["3","4","****"]
+                            }  
+                    },
+                    {
+                        "name": "dx_replace_by_colname",
+                        "parameter": 
+                            {
+                            "columnName":0,
+                            "paras":["3","4","****"]
+                            }  
+                    }
+                ],
                 "writer": {
                     "name": "mongodbwriter",
                     "parameter": {

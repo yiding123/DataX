@@ -120,6 +120,7 @@ public class CoreConstant {
 	public static final String JOB_WRITER_PARAMETER = "writer.parameter";
 
 	public static final String TRANSFORMER_PARAMETER_COLUMNINDEX = "parameter.columnIndex";
+	public static final String TRANSFORMER_PARAMETER_COLUMNNAME = "parameter.columnName";
 	public static final String TRANSFORMER_PARAMETER_PARAS = "parameter.paras";
 	public static final String TRANSFORMER_PARAMETER_CONTEXT = "parameter.context";
 	public static final String TRANSFORMER_PARAMETER_CODE = "parameter.code";

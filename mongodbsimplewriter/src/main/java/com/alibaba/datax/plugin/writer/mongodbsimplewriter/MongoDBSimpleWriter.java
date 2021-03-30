@@ -1,8 +1,8 @@
 package com.alibaba.datax.plugin.writer.mongodbsimplewriter;
 
 import com.alibaba.datax.common.element.Record;
+import com.alibaba.datax.common.element.SimpleColumn;
 import com.alibaba.datax.common.element.SimpleRecord;
-import com.alibaba.datax.common.element.SimpleRecord.SimpleColumn;
 import com.alibaba.datax.common.exception.DataXException;
 import com.alibaba.datax.common.plugin.RecordReceiver;
 import com.alibaba.datax.common.spi.Writer;

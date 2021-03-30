@@ -58,6 +58,14 @@ public class TransformerExecution {
             }
             finalParas[0] = transformerExecutionParas.getColumnIndex();
 
+        } else if (transformerExecutionParas.getColumnName() != null) {
+            if (transformerExecutionParas.getParas() != null) {
+                finalParas = new Object[transformerExecutionParas.getParas().length + 1];
+                System.arraycopy(transformerExecutionParas.getParas(), 0, finalParas, 1, transformerExecutionParas.getParas().length);
+            } else {
+                finalParas = new Object[1];
+            }
+            finalParas[0] = transformerExecutionParas.getColumnName();
         } else {
             if (transformerExecutionParas.getParas() != null) {
                 finalParas = transformerExecutionParas.getParas();
@@ -106,6 +114,10 @@ public class TransformerExecution {
 
     public Integer getColumnIndex() {
         return transformerExecutionParas.getColumnIndex();
+    }
+
+    public String getColumnName() {
+        return transformerExecutionParas.getColumnName();
     }
 
     public String getTransformerName() {

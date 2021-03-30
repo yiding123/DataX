@@ -1,7 +1,7 @@
 package com.alibaba.datax.plugin.reader.mongodbsimplereader;
 
+import com.alibaba.datax.common.element.SimpleColumn;
 import com.alibaba.datax.common.element.SimpleRecord;
-import com.alibaba.datax.common.element.SimpleRecord.SimpleColumn;
 import com.alibaba.datax.common.exception.DataXException;
 import com.alibaba.datax.common.plugin.RecordSender;
 import com.alibaba.datax.common.spi.Reader;
@@ -112,7 +112,7 @@ public class MongoDBSimpleReader extends Reader {
             while (dbCursor.hasNext()) {
                 Document item = dbCursor.next();
                 Iterator<String> colIters = item.keySet().iterator();
-                List<SimpleRecord.SimpleColumn> columnsList = new ArrayList<SimpleRecord.SimpleColumn>();
+                List<SimpleColumn> columnsList = new ArrayList<SimpleColumn>();
                 while(colIters.hasNext()){
                     String key = colIters.next();
                     Object value = item.get(key);
